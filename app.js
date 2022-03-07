@@ -16,18 +16,23 @@ let correctGuesses = 0;
 let totalGuesses = 0;
 
 shedButton.addEventListener('click', () => {
-    // get a random item to call the 'correct spot'
+    alert{'clicked the shed'};
 
+    // get a random item to call the 'correct spot'
+math.floor(math.random * 3)
     // call the handleGuess function with the correct parameters (the user's guess and the "correct" hiding place) to do DOM work
 });
 
 treeButton.addEventListener('click', () => {
+    alert{'clicked the tree'};
     // get a random item to call the 'correct spot'
 
     // call the handleGuess function with the correct parameters (the user's guess and the "correct" hiding place) to do DOM work
 });
 
 boulderButton.addEventListener('click', () => {
+    alert{'clicked the boulder'};
+
     // get a random item to call the 'correct spot'
 
     // call the handleGuess function with the correct parameters (the user's guess and the "correct" hiding place) to do DOM work
