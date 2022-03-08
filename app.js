@@ -17,13 +17,15 @@ let totalGuesses = 0;
 
 shedButton.addEventListener('click', () => {
     alert('clicked the shed');
-   
+    handleGuess();
     // get a random item to call the 'correct spot'
     // call the handleGuess function with the correct parameters (the user's guess and the "correct" hiding place) to do DOM work
 });
 
 treeButton.addEventListener('click', () => {
     alert('clicked the tree');
+    handleGuess();
+
     // get a random item to call the 'correct spot'
     
     // call the handleGuess function with the correct parameters (the user's guess and the "correct" hiding place) to do DOM work
@@ -31,6 +33,7 @@ treeButton.addEventListener('click', () => {
 
 boulderButton.addEventListener('click', () => {
     alert('clicked the boulder');
+    handleGuess();
 
     // get a random item to call the 'correct spot'
     // don't use const number, use the index below
@@ -61,13 +64,18 @@ function handleGuess(userGuess, correctSpot) {
     // first, right after clicking, we need to remove the emoji face from the previous hiding place that way we don't end up with more than one emoji face
 
     // we can do that by removing the .face class from all containers
+
+    const div = document.getElementsByClassName("hiding-place");
+    div.classList.remove('face');
+
     //(**search how to remove class from container, also how to add it in the first place...) 
     // then increment the guesses
     total++ 
     // then use getElementById and the correctSpot string to grab the appropriate container from the DOM
 
     // then add the .face css class to that element so that the face shows up
-
+    const div = document.getElementsByClassName("hiding-place");
+    div.classList.add('face');
     // then if the user guess is correct, increment the correct guesses
 
     // update the DOM to show the new value of wins, losses and total guesses to the user
