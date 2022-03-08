@@ -17,10 +17,7 @@ let totalGuesses = 0;
 
 shedButton.addEventListener('click', () => {
     alert('clicked the shed');
-    total++;
-    winsEl.textContent = wins;
-    totalEl.textContent = total;
-    lossesEl.textContent = total - wins;
+   
     // get a random item to call the 'correct spot'
     // call the handleGuess function with the correct parameters (the user's guess and the "correct" hiding place) to do DOM work
 });
@@ -28,10 +25,7 @@ shedButton.addEventListener('click', () => {
 treeButton.addEventListener('click', () => {
     alert('clicked the tree');
     // get a random item to call the 'correct spot'
-    total++;
-    winsEl.textContent = wins;
-    totalEl.textContent = total;
-    lossesEl.textContent = total - wins;
+    
     // call the handleGuess function with the correct parameters (the user's guess and the "correct" hiding place) to do DOM work
 });
 
@@ -39,10 +33,11 @@ boulderButton.addEventListener('click', () => {
     alert('clicked the boulder');
 
     // get a random item to call the 'correct spot'
-    total++;
-    winsEl.textContent = wins;
-    totalEl.textContent = total;
-    lossesEl.textContent = total - wins;
+    // don't use const number, use the index below
+    // paste the return 'random hiding place string' here 
+
+    // const correctHidingPlaceID = `hidingPlaces-${'random hiding place string'}`
+
     // call the handleGuess function with the correct parameters (the user's guess and the "correct" hiding place) to do DOM work
 });
 
@@ -63,12 +58,12 @@ function getRandomHidingSpot() {
 }
 
 function handleGuess(userGuess, correctSpot) {
-    // first, right after clicking, we need to remove the emoiji face from the previous hiding place that way we don't end up with more than one emoji face
+    // first, right after clicking, we need to remove the emoji face from the previous hiding place that way we don't end up with more than one emoji face
 
     // we can do that by removing the .face class from all containers
-
+    //(**search how to remove class from container, also how to add it in the first place...) 
     // then increment the guesses
-
+    total++ 
     // then use getElementById and the correctSpot string to grab the appropriate container from the DOM
 
     // then add the .face css class to that element so that the face shows up
@@ -76,4 +71,8 @@ function handleGuess(userGuess, correctSpot) {
     // then if the user guess is correct, increment the correct guesses
 
     // update the DOM to show the new value of wins, losses and total guesses to the user
+    wins++;
+    winsEl.textContent = 'wins';   //do I need to declare these El's somewhere? single quotes?
+    totalEl.textContent = 'total';
+    lossesEl.textContent = 'total' - 'wins';
 }
