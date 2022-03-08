@@ -68,16 +68,20 @@ function handleGuess(userGuess, correctSpot) {
     const div = document.getElementsByClassName("hiding-place");
     div.classList.remove('face');
 
-    //(**search how to remove class from container, also how to add it in the first place...) 
     // then increment the guesses
     total++ 
-    // then use getElementById and the correctSpot string to grab the appropriate container from the DOM
 
+    // then use getElementById and the correctSpot string to grab the appropriate container from the DOM
+    
+    getElementById("tree-container")
+    getElementById("boulder-container")
+    getElementById("shed-container")
+
+    
     // then add the .face css class to that element so that the face shows up
     const div = document.getElementsByClassName("hiding-place");
     div.classList.add('face');
     // then if the user guess is correct, increment the correct guesses
-
     // update the DOM to show the new value of wins, losses and total guesses to the user
     wins++;
     winsEl.textContent = 'wins';   //do I need to declare these El's somewhere? single quotes?
